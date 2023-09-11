@@ -16,7 +16,9 @@ ENV GALLERIES='[{"name":"model-gallery", "url":"github:go-skynet/model-gallery/i
 ARG GO_TAGS="stablediffusion tts"
 
 RUN apt-get update && \
-    apt-get install -y ca-certificates cmake curl patch pip
+    apt-get install -y git
+
+RUN apt-get install -y ca-certificates cmake curl patch pip
 
 # Use the variables in subsequent instructions
 RUN echo "Target Architecture: $TARGETARCH"
